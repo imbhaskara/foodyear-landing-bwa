@@ -3,24 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Import Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-        theme: {
-            extend: {
-            colors: {
-                clifford: '#da373d',
-            }
-            }
+
+    <!-- Import Tailwind Config -->
+    <script src="assets/script/tailwind-config.js"></script>
+
+    <!-- Stylesheet -->
+    <style type="text/tailwindcss">
+        .flex::before,
+        .flex::after {
+            display:none !important;
         }
+
+        .wrapper {
+            @apply max-w-[1440px] px-6 lg:px-12 xl:px-24 mx-auto font-quicksand;
         }
-    </script>
+
+        .nav-link {
+            @apply text-grey font-normal text-lg relative;
+        }
+
+        .nav-link.active {
+            @apply text-dark font-semibold max-w-max;
+        }
+
+        .nav-link.active span, .text__underline {
+            @apply h-1 absolute w-full z-[-10] rounded-[100px] bg-pink left-0 bottom-[6px];
+        }
+
+        .btn {
+            @apply py-4 px-8 font-semibold text-dark text-center text-lg capitalize rounded-t-[32px] rounded-[16px];
+        }
+
+        .btn-pink {
+            @apply bg-pink;
+        }
+        
+    </style>
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline **text-clifford**">
-    Hello world!
-  </h1>
+  <!-- Navbar Section -->
+  <nav class="pt-6 wrapper lg:pt-12">
+    <div class="flex flex-col items-stretch lg:flex-row lg:items-center lg:justify-between">
+        <!-- Logo & Toggler Button Mobile -->
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div>
+                <img src="assets/svgs/logo.svg" alt="Foodyear Logo">
+            </div>
+            <!-- Toogler Mobile Button -->
+            <div>
+                <button class="block p-1 outline-none lg:hidden mobile-menu-button" data-target="#navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-dark-1 dark:text-light-1" x-show="!showMenu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Navigation Menu -->
+        <div class="mt-4 mobile-menu lg:block lg:mt-0" id="navigation">
+            <div class="flex flex-col w-full font-normal lg:flex-row text-dark lg:w-max lg:gap-x-9 gap-y-4 lg:items-center">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Bevarages</a>
+                <a href="#" class="nav-link">Chef</a>
+                <a href="#" class="nav-link">Ingredient</a>
+                <a href="#" class="nav-link">Stories</a>
+                <a href="#" class="btn btn-pink lg:ml-[-16px] mt-4 lg:mt-0">My Kitchen</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+  
+  <!-- script dari tailwind-elements -->
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
+
 </html>
