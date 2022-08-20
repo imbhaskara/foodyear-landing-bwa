@@ -35,7 +35,8 @@
             @apply text-dark font-semibold max-w-max;
         }
 
-        .nav-link.active span, .text__underline {
+        .nav-link.active span,
+        .text__underline {
             @apply h-1 absolute w-full z-[-10] rounded-[100px] bg-pink left-0 bottom-[6px];
         }
 
@@ -45,6 +46,10 @@
 
         .btn-pink {
             @apply bg-pink;
+        }
+
+        section {
+            @apply pt-[100px];
         }
         
     </style>
@@ -72,17 +77,55 @@
         <!-- Navigation Menu -->
         <div class="mt-4 mobile-menu lg:block lg:mt-0" id="navigation">
             <div class="flex flex-col w-full font-normal lg:flex-row text-dark lg:w-max lg:gap-x-9 gap-y-4 lg:items-center">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#" class="nav-link">Bevarages</a>
-                <a href="#" class="nav-link">Chef</a>
-                <a href="#" class="nav-link">Ingredient</a>
-                <a href="#" class="nav-link">Stories</a>
+                <a href="#" class="nav-link active">Home <span></span></a>
+                <a href="#" class="nav-link">Bevarages <span></span></a>
+                <a href="#" class="nav-link">Chef <span></span></a>
+                <a href="#" class="nav-link">Ingredient <span></span></a>
+                <a href="#" class="nav-link">Stories <span></span></a>
                 <a href="#" class="btn btn-pink lg:ml-[-16px] mt-4 lg:mt-0">My Kitchen</a>
             </div>
         </div>
     </div>
   </nav>
-  
+  <!-- End Navbar Section -->
+
+  <!-- Hero Section -->
+  <section class="wrapper">
+    <div class="grid items-center gap-10 lg:grid-cols-2">
+        <!-- Bagian Tulisan -->
+        <div>
+            <div class="text-5xl font-bold leading-[68px] text-dark">
+                <span class="relative overflow-hidden">
+                    Eat <span class="text__underline !h-2 !w-[90%]"></span>
+                </span>
+                What You Cook
+                <br class="hidden md:block">
+                With Us,
+                <span class="relative">
+                    Together! <span class="text__underline !h-2"></span>
+                </span>
+            </div>
+            <div class="mt-4 text-xl leading-9 text-grey">
+                When you eat something that cooked by yourself,
+                <br class="hidden md:block">
+                the happiness is priceless
+            </div>
+            <!-- button CTA -->
+            <div class="mt-6">
+                <a href="#" class="btn bg-yellow">Decide a Menu</a>
+            </div>
+        </div>
+        <!-- Bagian Gambar -->
+        <div class="relative">
+            <div class="absolute z-10 right-[50%] bottom-[50%] translate-x-1/2 translate-y-1/2">
+                <img src="assets/svgs/ic-play.svg" alt="Play Button">
+            </div>
+            <img src="assets/images/hero-image.png" alt="Foodyear Hero Image">
+        </div>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
   <!-- script dari tailwind-elements -->
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
