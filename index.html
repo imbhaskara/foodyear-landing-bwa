@@ -52,6 +52,9 @@
             @apply pt-[100px];
         }
         
+        footer {
+            @apply py-10;
+        }
     </style>
 </head>
 
@@ -127,6 +130,29 @@
   <!-- End Hero Section -->
 
   <!-- Testimonial Section -->
+  <section class="wrapper !pt-[160px]">
+    <div class="flex flex-col items-center justify-center gap-5">
+        <!-- Quotes -->
+        <div class="text-center text-2xl md:text-4xl md:max-w-[736px] text-dark leading-snug md:leading-[48px] relative">
+            <img src="assets/svgs/quote1.svg" alt="Icon Quote" class="absolute left-[-100px] top-[-80px] z-[-10]">
+            Awalnya saya malu dengan mertua karena tidak bisa memasak, kini mereka lebih suka makan malam di rumah demi menyantap masakan yang saya buat sendiri
+        </div>
+        <!-- Users quotes -->
+        <div class="flex items-center gap-5 mt-4">
+            <div class="relative">
+                <img src="assets/images/avatar.png" class="relative z-10 object-cover w-20 rounded-full"
+                    alt="Foodyar">
+                <span class="w-20 bg-purple absolute z-0 h-20 rounded-full bottom-[-3px] right-[-6px]"></span>
+                <span class="w-20 bg-cream absolute z-0 h-20 rounded-full top-[-3px] left-[-6px]"></span>
+            </div>
+            <div>
+                <div class="text-dark text-[22px] font-semibold">Camella Sarrah</div>
+                <p class="mt-1 text-base text-grey">Vege Master</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- End Testimonial Section -->
 
   <!-- Statistik Section -->
   <section class="wrapper">
@@ -187,7 +213,13 @@
   <!-- End Download App -->
 
   <!-- Footer -->
-
+  <footer class="wrapper">
+    <hr class="'w-[1440px] pb-4">
+    <p class="text-center text-grey">
+        All Rights Reserved Foodyear by Pixel from BuildwithAngga
+    </p>
+  </footer>
+  <!-- End Footer -->
   <!-- script dari tailwind-elements -->
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
